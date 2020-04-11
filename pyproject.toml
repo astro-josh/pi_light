@@ -1,12 +1,14 @@
 [tool.poetry]
 name = "pi-light"
 version = "0.1.0"
-description = ""
+description = "Django WebApp for command Blinkt Light on Raspberry Pi"
 authors = ["obviousrebel <joshalex359@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-pyyaml = "^5.3.1"
+django = "^3.0.5"
+django-material = "^1.6.3"
+django-viewflow = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
