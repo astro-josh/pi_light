@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('command/', views.LightCommandView.as_view(), name='Command'),
+    path('command/', views.LightCommandViewAjax.as_view(), name='Command'),
 ]
