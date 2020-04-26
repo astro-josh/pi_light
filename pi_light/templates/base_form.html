@@ -15,7 +15,7 @@
 <div class="row valign change-form">
     <div class="{% block formclass %}col s12 m8 l8{% endblock %}">
         <div class="card">
-            <dmc-form><form method="POST" id="post-form" enctype="multipart/form-data">
+            <dmc-form><form method="POST" id="post-command" enctype="multipart/form-data">
                 <div class="card-content">
                     <span class="card-title grey-text text-darken-2">{% block formtitle %}Form{% endblock %}</span>
                     {% csrf_token %}

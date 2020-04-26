@@ -1,9 +1,11 @@
+import json
+
 from django.shortcuts import render
 from light.forms import CommandForm
 from django.views.generic import FormView
 
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.views.generic.edit import CreateView
 
 class AjaxableResponseMixin:
@@ -51,3 +53,23 @@ class LightCommandView(FormView):
 
 class LightCommandViewAjax(AjaxableResponseMixin, LightCommandView):
     pass
+
+
+def submit_command(request):
+    print("submit")
+    username = request.GET.get('pattern', None)
+    print(username)
+    if request.method == 'SUBMIT':
+
+        response_data = {}
+        response_data['msg'] = 'Post was deleted.'
+
+        return HttpResponse(
+            json.dumps(response_data),
+            content_type="application/json"
+        )
+    else:
+        return HttpResponse(
+            json.dumps({"nothing to see": "this isn't happening"}),
+            content_type="application/json"
+        )
