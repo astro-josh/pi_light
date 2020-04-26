@@ -27,9 +27,9 @@ class CommandForm(forms.Form):
 
     template = Template("""
     {% form %}
-        {% part form.pattern prefix %}<i class="material-icons prefix">account_box</i>{% endpart %}
-        {% part form.colors prefix %}<i class="material-icons prefix">email</i>{% endpart %}
-        {% part form.iterations prefix %}<i class="material-icons prefix">lock_open</i>{% endpart %}
+        {% part form.pattern prefix %}<i class="material-icons prefix">graphic_eq</i>{% endpart %}
+        {% part form.colors prefix %}<i class="material-icons prefix">color_lens</i>{% endpart %}
+        {% part form.iterations prefix %}<i class="material-icons prefix">autorenew</i>{% endpart %}
     {% endform %}
     """)
 
